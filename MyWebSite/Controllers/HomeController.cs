@@ -12,7 +12,6 @@ namespace MyWebSite.Controllers
         {
             return View();
         }
-
        
     }
 }
