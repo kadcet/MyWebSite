@@ -16,6 +16,7 @@ namespace MyWebSite.Views.Shared.Components.CategoriesVC
         {
 
             var model = context.Categories.ToList();
+
             return View("_categoryVC",model);
         }
     }
