@@ -1,0 +1,9 @@
+﻿@model List<Category>
+<ul id="HeaderMenuSeceneklerAlani">
+         <li class="HeaderMenuSecenekleri"><a href="index.html" target="_top">Ana Sayfa</a></li>
+    @foreach (var m in Model)
+    {
+        <li class="HeaderMenuSecenekleri"><a href="Erkek-Ayakkabilari.html" target="_top">@m.CategoryName</a></li>
+    }
+
+</ul>

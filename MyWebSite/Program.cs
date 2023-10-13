@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using MyWebSite.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ETradeDbContext>(opt =>
+
+    opt.UseSqlServer("Server=.;Database=ETradeWebDb;Integrated Security=True;" +
+        "TrustServerCertificate=true"));
 
 var app = builder.Build();
 
