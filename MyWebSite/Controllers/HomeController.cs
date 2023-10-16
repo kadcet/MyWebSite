@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyWebSite.Models;
 using System.Diagnostics;
 
@@ -15,7 +16,7 @@ namespace MyWebSite.Controllers
 
         public IActionResult Index()
         {
-            var model=_context.Products.ToList();
+            var model = _context.Products.Include("Category").ToList();
             return View(model);
         }
        
