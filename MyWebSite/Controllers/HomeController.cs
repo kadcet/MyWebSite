@@ -6,11 +6,17 @@ namespace MyWebSite.Controllers
 {
     public class HomeController : Controller
     {
-       
+        private readonly ETradeDbContext _context;
+
+        public HomeController(ETradeDbContext context)
+        {
+            this._context = context;
+        }
 
         public IActionResult Index()
         {
-            return View();
+            var model=_context.Products.ToList();
+            return View(model);
         }
        
     }

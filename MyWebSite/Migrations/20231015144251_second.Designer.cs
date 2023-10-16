@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyWebSite.Models;
 
@@ -10,9 +11,11 @@ using MyWebSite.Models;
 namespace MyWebSite.Migrations
 {
     [DbContext(typeof(ETradeDbContext))]
-    partial class ETradeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231015144251_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
