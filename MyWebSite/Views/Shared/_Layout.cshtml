@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - MyWebSite</title>
 	<script type="text/javascript" language="javascript" src="Framework/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="~/Ayarlar/Stil.css"/>
+	@await RenderSectionAsync("HeadSections",required:false)
 	<script type="text/javascript" language="javascript" src="~/Ayarlar/Script.js"></script>
     
 </head>
